@@ -10,16 +10,19 @@ const linksData = [
   {
     id: 1,
     title: "Instagram",
+    icon: "fa-brands fa-instagram",
     url: "https://www.instagram.com/asep_300305/",
   },
   {
     id: 2,
     title: "Youtube",
+    icon: "fa-brands fa-youtube",
     url: "https://www.youtube.com/@mohamadasepsaepulloh8305",
   },
   {
     id: 3,
     title: "Linkedin",
+    icon: "fa-brands fa-linkedin",
     url: "https://www.linkedin.com/in/mohamadasepsaepulloh/",
   },
 ];
@@ -30,7 +33,7 @@ export default function Home() {
       className={`${outfit.className} bg-gradient-to-br from-emerald-100 to-emerald-200`}
     >
       <section className="min-h-screen container mx-auto px-4 py-16 lg:max-w-96">
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center text-center">
           <Image
             src="https://media.licdn.com/dms/image/v2/D5603AQGwcMMuMYpQlg/profile-displayphoto-shrink_400_400/B56ZPmgm7zHoAg-/0/1734739128644?e=1753920000&v=beta&t=T9aurCsXCFaPd831ec8MDVW_QX8EdgPo8HBgONwka6E"
             alt="profile"
@@ -41,18 +44,26 @@ export default function Home() {
           <h1 className="text-3xl font-sebold text-gray-700 mt-2">
             Mohamad Asep Saepulloh
           </h1>
-          <p className="w-2/3 text-center">FullStack Developer</p>
+          <p className="w-2/3">FullStack Developer</p>
         </div>
         <div className="mt-4 flex flex-col gap-3">
-          {linksData.map((data: { id: number; title: string; url: string }) => (
-            <Link
-              key={`${data.title}-${data.id}`}
-              href={data.url}
-              className="w-full font-semibold border-black border-2 p-2.5 bg-emerald-400 shadow-[2px_2px_0px_rgba(0,0,0,1)] hover:translate-y-[2px] hover:translate-x-[2px] hover:shadow-none transition-all"
-            >
-              {data.title}
-            </Link>
-          ))}
+          {linksData.map(
+            (data: {
+              id: number;
+              title: string;
+              icon: string;
+              url: string;
+            }) => (
+              <Link
+                key={`${data.title}-${data.id}`}
+                href={data.url}
+                className="w-full font-semibold border-black border-2 p-2.5 bg-emerald-400 shadow-[2px_2px_0px_rgba(0,0,0,1)] hover:translate-y-[2px] hover:translate-x-[2px] hover:shadow-none transition-all"
+              >
+                <i className={`${data.icon} mr-2`} />
+                {data.title}
+              </Link>
+            )
+          )}
         </div>
       </section>
     </main>
