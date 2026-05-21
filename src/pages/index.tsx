@@ -25,6 +25,18 @@ const linksData = [
     icon: "fa-brands fa-linkedin",
     url: "https://www.linkedin.com/in/mohamadasepsaepulloh/",
   },
+  {
+    id: 4,
+    title: "GitHub",
+    icon: "fa-brands fa-github",
+    url: "https://github.com/asep3003",
+  },
+  {
+    id: 5,
+    title: "Email",
+    icon: "fa-solid fa-envelope",
+    url: "mailto:saepulloha133@gmail.com",
+  },
 ];
 
 export default function Home() {
@@ -35,7 +47,7 @@ export default function Home() {
       <section className="min-h-screen container mx-auto px-4 py-16 lg:max-w-96">
         <div className="flex flex-col justify-center items-center text-center">
           <Image
-            src="https://media.licdn.com/dms/image/v2/D5603AQGwcMMuMYpQlg/profile-displayphoto-shrink_400_400/B56ZPmgm7zHoAg-/0/1734739128644?e=1753920000&v=beta&t=T9aurCsXCFaPd831ec8MDVW_QX8EdgPo8HBgONwka6E"
+            src="https://www.masbravv.my.id/assets/profile-GjsWe-ms.png"
             alt="profile"
             width={100}
             height={100}
@@ -62,7 +74,7 @@ export default function Home() {
                 <i className={`${data.icon} mr-2`} />
                 {data.title}
               </Link>
-            )
+            ),
           )}
         </div>
       </section>
